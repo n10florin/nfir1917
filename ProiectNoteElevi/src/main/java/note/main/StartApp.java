@@ -30,8 +30,8 @@ public class StartApp {
 		NoteController ctrl = new NoteController();
 		List<Medie> medii;
 		List<Corigent> corigenti;
-		ctrl.readElevi("C:\\Users\\Florin\\Desktop\\04-ProiectNoteElevi\\ProiectNoteElevi\\src\\elevi");
-		ctrl.readNote("C:\\Users\\Florin\\Desktop\\04-ProiectNoteElevi\\ProiectNoteElevi\\src\\note");
+		ctrl.readElevi("D:\\git\\vvss\\ProiectNoteElevi\\src\\elevi");
+		ctrl.readNote("D:\\git\\vvss\\ProiectNoteElevi\\src\\note");
 		ctrl.creeazaClasa(ctrl.getElevi(), ctrl.getNote());
 		boolean gasit = false;
 		while(!gasit) {
@@ -45,6 +45,9 @@ public class StartApp {
 				switch(option) {
 //					nr. matricol,materie,nota
 				case 1: ctrl.addNota(new Nota(Integer.parseInt(br.readLine()), br.readLine(), Double.parseDouble(br.readLine())));
+						for (Nota nota: ctrl.getNote()){
+							System.out.println(nota);
+						}
 						break;
 				case 2: medii = ctrl.calculeazaMedii();
 						for(Medie medie:medii)

@@ -53,6 +53,9 @@ public class Nota {
 	public void setNota(double nota) {
 		this.nota = nota;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return nrmatricol + " " + materie + " " + nota;
+	}
 }
