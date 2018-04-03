@@ -44,7 +44,7 @@ public class StartApp {
 				int option = Integer.parseInt(br.readLine());
 				switch(option) {
 //					nr. matricol,materie,nota
-				case 1: ctrl.addNota(new Nota(Integer.parseInt(br.readLine()), br.readLine(), Double.parseDouble(br.readLine())));
+				case 1: ctrl.addNota(new Nota(Integer.parseInt(br.readLine()), br.readLine(), Integer.parseInt(br.readLine())));
 						for (Nota nota: ctrl.getNote()){
 							System.out.println(nota);
 						}
@@ -66,6 +66,10 @@ public class StartApp {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			catch (ClasaException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}

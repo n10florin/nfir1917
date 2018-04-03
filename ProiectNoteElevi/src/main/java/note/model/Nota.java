@@ -4,9 +4,9 @@ public class Nota {
 	
 	private int nrmatricol;
 	private String materie;
-	private double nota;
+	private int nota;
 	
-	public Nota(int nrmatricol, String materie, double nota) {
+	public Nota(int nrmatricol, String materie, int nota) {
 		this.setNrmatricol(nrmatricol);
 		this.setMaterie(materie);
 		this.setNota(nota);
@@ -43,14 +43,14 @@ public class Nota {
 	/**
 	 * @return the nota
 	 */
-	public double getNota() {
+	public int getNota() {
 		return nota;
 	}
 
 	/**
 	 * @param nota the nota to set
 	 */
-	public void setNota(double nota) {
+	public void setNota(int nota) {
 		this.nota = nota;
 	}
 

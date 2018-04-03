@@ -28,7 +28,7 @@ public class AddNotaTest {
 
 	@Test
 	public void test1() throws ClasaException {
-		Nota nota = new Nota(1, "Desen", 10);
+		Nota nota = new Nota(1, "vvss", 10);
 		ctrl.addNota(nota);
 		assertEquals(1, ctrl.getNote().size());
 	}
@@ -37,7 +37,7 @@ public class AddNotaTest {
 	public void test2() throws ClasaException {
 		expectedEx.expect(ClasaException.class);
 		expectedEx.expectMessage(Constants.invalidNrmatricol);
-		Nota nota = new Nota(10, "Istorie", 5);
+		Nota nota = new Nota(-1, "matematica", 6);
 		ctrl.addNota(nota);
 	}
 	
@@ -53,7 +53,7 @@ public class AddNotaTest {
 	public void test4() throws ClasaException {
 		expectedEx.expect(ClasaException.class);
 		expectedEx.expectMessage(Constants.invalidMateria);
-		Nota nota = new Nota(1, "Isto", 5);
+		Nota nota = new Nota(2, "flp", 5);
 		ctrl.addNota(nota);
 	}
 	
@@ -61,7 +61,7 @@ public class AddNotaTest {
 	public void test5() throws ClasaException {
 		expectedEx.expect(ClasaException.class);
 		expectedEx.expectMessage(Constants.invalidNota);
-		Nota nota = new Nota(1, "Istorie", 5.002);
+		Nota nota = new Nota(3, "info", 11);
 		ctrl.addNota(nota);
 	}
 	
@@ -75,7 +75,7 @@ public class AddNotaTest {
 	
 	@Test
 	public void test7() throws ClasaException {
-		Nota nota = new Nota(2, "Istorie", 10);
+		Nota nota = new Nota(1, "4444", 1);
 		ctrl.addNota(nota);
 		assertEquals(1, ctrl.getNote().size());
 	}
@@ -98,7 +98,7 @@ public class AddNotaTest {
 	public void test10() throws ClasaException {
 		expectedEx.expect(ClasaException.class);
 		expectedEx.expectMessage(Constants.invalidNrmatricol);
-		Nota nota = new Nota(1001, "Istorie", 5);
+		Nota nota = new Nota(0, "4444", 1);
 		ctrl.addNota(nota);
 	}
 	
@@ -165,7 +165,7 @@ public class AddNotaTest {
 	public void test19() throws ClasaException {
 		expectedEx.expect(ClasaException.class);
 		expectedEx.expectMessage(Constants.invalidMateria);
-		Nota nota = new Nota(1, "", 5);
+		Nota nota = new Nota(1, "333", 10);
 		ctrl.addNota(nota);
 	}
 	
@@ -181,7 +181,7 @@ public class AddNotaTest {
 	public void test21() throws ClasaException {
 		expectedEx.expect(ClasaException.class);
 		expectedEx.expectMessage(Constants.invalidNota);
-		Nota nota = new Nota(1, "Istorie", -2);
+		Nota nota = new Nota(2, "4444", 0);
 		ctrl.addNota(nota);
 	}
 	

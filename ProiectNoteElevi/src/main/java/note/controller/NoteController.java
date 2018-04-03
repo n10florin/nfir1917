@@ -51,7 +51,7 @@ public class NoteController {
 		return elevi.getElevi();
 	}
 	
-	public HashMap<Elev, HashMap<String, List<Double>>> getClasa() {
+	public HashMap<Elev, HashMap<String, List<Integer>>> getClasa() {
 		return clasa.getClasa();
 	}
 	

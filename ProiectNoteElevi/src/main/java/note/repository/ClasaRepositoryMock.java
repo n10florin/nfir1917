@@ -15,10 +15,10 @@ import note.model.Nota;
 
 public class ClasaRepositoryMock implements ClasaRepository{
 
-	private HashMap<Elev, HashMap<String, List<Double>>> clasa;
+	private HashMap<Elev, HashMap<String, List<Integer>>> clasa;
 	
 	public ClasaRepositoryMock() {
-		clasa = new HashMap<Elev, HashMap<String, List<Double>>>();
+		clasa = new HashMap<Elev, HashMap<String, List<Integer>>>();
 	}
 
 	@Override
@@ -30,9 +30,9 @@ public class ClasaRepositoryMock implements ClasaRepository{
 					materii.add(nota.getMaterie());
 		}
 		for (Elev elev : elevi) {
-			HashMap<String, List<Double>> situatie = new HashMap<String, List<Double>>();
+			HashMap<String, List<Integer>> situatie = new HashMap<String, List<Integer>>();
 			for(String materie : materii) {
-				List<Double> noteMaterie = new LinkedList<Double>();
+				List<Integer> noteMaterie = new LinkedList<Integer>();
 				for(Nota nota : note) 
 					if(nota.getMaterie().equals(materie) && nota.getNrmatricol() == elev.getNrmatricol())
 						noteMaterie.add(nota.getNota());
@@ -44,7 +44,7 @@ public class ClasaRepositoryMock implements ClasaRepository{
 	}
 
 	@Override
-	public HashMap<Elev, HashMap<String, List<Double>>> getClasa() {
+	public HashMap<Elev, HashMap<String, List<Integer>>> getClasa() {
 		// TODO Auto-generated method stub
 		return clasa;
 	}
@@ -62,7 +62,7 @@ public class ClasaRepositoryMock implements ClasaRepository{
 				double medieElev = 0;
 				for(String materie : clasa.get(elev).keySet()) {
 					nrMaterii++;
-					List<Double> noteElev = clasa.get(elev).get(materie);
+					List<Integer> noteElev = clasa.get(elev).get(materie);
 					int nrNote = noteElev.size();
 					int i = 0;
 					double suma = 0;
@@ -103,7 +103,7 @@ public class ClasaRepositoryMock implements ClasaRepository{
 			for(Elev elev : clasa.keySet()) {
 				Corigent corigent = new Corigent(elev.getNume(), 0);
 				for(String materie : clasa.get(elev).keySet()) {
-					List<Double> noteElev = clasa.get(elev).get(materie);
+					List<Integer> noteElev = clasa.get(elev).get(materie);
 					int nrNote = noteElev.size();
 					int i = 0;
 					double suma = 0;

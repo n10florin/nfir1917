@@ -38,8 +38,6 @@ public class NoteRepositoryMock implements NoteRepository{
 			throw new ClasaException(Constants.invalidNrmatricol);
 		if(nota.getNota() < Constants.minNota || nota.getNota() > Constants.maxNota)
 			throw new ClasaException(Constants.invalidNota);
-		if(nota.getNota() != (int)nota.getNota())
-			throw new ClasaException(Constants.invalidNota);
 		if(nota.getNrmatricol() != nota.getNrmatricol())
 			throw new ClasaException(Constants.invalidNrmatricol);
 		return true;
@@ -59,7 +57,7 @@ public class NoteRepositoryMock implements NoteRepository{
 			String line;
 			while ((line = br.readLine()) != null) {
 				String[] values = line.split(";");
-				Nota nota = new Nota(Integer.parseInt(values[0]), values[1], Double.parseDouble(values[2]));
+				Nota nota = new Nota(Integer.parseInt(values[0]), values[1], Integer.parseInt(values[2]));
 				note.add(nota);
 			}
 			br.close();
