@@ -28,6 +28,7 @@ public class NoteController {
 	
 	public void addNota(Nota nota) throws ClasaException {
 		note.addNota(nota);
+		clasa.creazaClasa(elevi.getElevi(), note.getNote());
 	}
 	
 	public void addElev(Elev elev) {

@@ -40,7 +40,6 @@ public class ClasaRepositoryMock implements ClasaRepository{
 			}
 			clasa.put(elev, situatie);
 		}
-		
 	}
 
 	@Override
@@ -51,7 +50,6 @@ public class ClasaRepositoryMock implements ClasaRepository{
 
 	@Override
 	public List<Medie> calculeazaMedii() throws ClasaException{
-		// TODO Auto-generated method stub
 		List<Medie> medii = new LinkedList<Medie>();
 		if(clasa.size() > 0) {
 			for(Elev elev : clasa.keySet()) {
@@ -59,7 +57,7 @@ public class ClasaRepositoryMock implements ClasaRepository{
 				medie.setElev(elev);
 				int nrMaterii = 0;
 				double sumaMedii = 0;
-				double medieElev = 0;
+				double medieElev;
 				for(String materie : clasa.get(elev).keySet()) {
 					nrMaterii++;
 					List<Integer> noteElev = clasa.get(elev).get(materie);
