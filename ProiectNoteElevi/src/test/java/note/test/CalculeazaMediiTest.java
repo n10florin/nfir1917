@@ -53,7 +53,6 @@ private NoteController ctrl;
 		ctrl.addNota(n7);
 		ctrl.addNota(n8);
 		ctrl.creeazaClasa(ctrl.getElevi(), ctrl.getNote());
-		//ctrl.afiseazaClasa();
 		List<Medie> rezultate = ctrl.calculeazaMedii();
 		assertEquals(rezultate.size(),2);
         for(Medie m : rezultate) {

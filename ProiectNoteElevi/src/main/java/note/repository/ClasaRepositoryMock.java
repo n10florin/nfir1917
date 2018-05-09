@@ -95,7 +95,7 @@ public class ClasaRepositoryMock implements ClasaRepository{
 	}
 
 	@Override
-	public List<Corigent> getCorigenti() {
+	public List<Corigent> getCorigenti() throws ClasaException{
 		List<Corigent> corigenti = new ArrayList<Corigent>();
 		if(clasa.size() > 0) {
 			for(Elev elev : clasa.keySet()) {
@@ -121,6 +121,8 @@ public class ClasaRepositoryMock implements ClasaRepository{
 				}
 			}
 		}
+        else
+            throw new ClasaException(Constants.emptyRepository);
 		return corigenti;
 	}
 	

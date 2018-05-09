@@ -32,16 +32,14 @@ public class IntegrationTest {
 	public ExpectedException expectedEx = ExpectedException.none();
 
 	@Test
-	public void test1() throws ClasaException {
-		//P->A
-		Nota nota = new Nota(1000, "Desena", 10);
+	public void testA() throws ClasaException {
+		Nota nota = new Nota(1000, "Desen", 10);
 		ctrl.addNota(nota);
 		assertEquals(1, ctrl.getNote().size());
 	}
-	
+
 	@Test
-	public void test2() throws ClasaException {
-		//P->B
+	public void testB() throws ClasaException {
 		Elev e1 = new Elev(1, "Elev1");
 		Elev e2 = new Elev(2, "Elev2");
 		ctrl.addElev(e1);
@@ -52,12 +50,11 @@ public class IntegrationTest {
 		List<Medie> rezultate = ctrl.calculeazaMedii();
 		for(Medie m : rezultate)
 			if(m.getElev().getNrmatricol() == 2)
-				assertEquals(m.getMedie(),0,0.0001);
+				assertEquals(m.getMedie(), Double.NaN,0.0001);
 	}
-	
+
 	@Test
-	public void test3() throws ClasaException {
-		//P->C
+	public void testC() throws ClasaException {
 		Elev e1 = new Elev(1, "Elev1");
 		Elev e2 = new Elev(2, "Elev2");
 		ctrl.addElev(e1);
@@ -80,105 +77,32 @@ public class IntegrationTest {
 		ctrl.addNota(n8);
 		ctrl.creeazaClasa(ctrl.getElevi(), ctrl.getNote());
 		List<Corigent> corigenti = ctrl.getCorigenti();
-		assertEquals(corigenti.get(1).getNrMaterii()+1, corigenti.get(0).getNrMaterii());
+		assertEquals(corigenti.get(1).getNrMaterii(), corigenti.get(0).getNrMaterii()+1);
 	}
-	
+
+    @Test
+    public void testABC() throws ClasaException {
+        Elev e1 = new Elev(1, "Elev1");
+        ctrl.addElev(e1);
+        Nota nota = new Nota(1, "Desen", 10);
+        ctrl.addNota(nota);
+        assertEquals(1, ctrl.getNote().size());
+        ctrl.creeazaClasa(ctrl.getElevi(), ctrl.getNote());
+        List<Medie> rezultate = ctrl.calculeazaMedii();
+        assertEquals(1, rezultate.size());
+        List<Corigent> corigenti = ctrl.getCorigenti();
+        assertEquals(corigenti.size(),0);
+    }
+
 	@Test
-	public void test4() throws ClasaException {
-		//P->B->A A-valid B-valid
+	public void testAB() throws ClasaException {
 		Elev e1 = new Elev(1, "Elev1");
 		ctrl.addElev(e1);
-		Nota nota = new Nota(1, "Desena", 10);
+		Nota nota = new Nota(1, "Desen", 10);
 		ctrl.addNota(nota);
-		assertEquals(1, ctrl.getNote().size());
-		ctrl.creeazaClasa(ctrl.getElevi(), ctrl.getNote());
+        assertEquals(1, ctrl.getNote().size());
+        ctrl.creeazaClasa(ctrl.getElevi(), ctrl.getNote());
 		List<Medie> rezultate = ctrl.calculeazaMedii();
 		assertEquals(1, rezultate.size());
 	}
-	
-	@Test
-	public void test5() throws ClasaException {
-		//P->B->A A-invalid B-valid
-		Elev e1 = new Elev(1, "Elev1");
-		ctrl.addElev(e1);
-		Nota nota = new Nota(1, "Desena", 10);
-		ctrl.addNota(nota);
-		assertEquals(1, ctrl.getNote().size());
-		ctrl.creeazaClasa(ctrl.getElevi(), ctrl.getNote());
-		List<Medie> rezultate = ctrl.calculeazaMedii();
-		assertEquals(1, rezultate.size());
-		expectedEx.expect(ClasaException.class);
-		expectedEx.expectMessage(Constants.invalidMateria);
-		Nota nota1 = new Nota(1, "Isto", 5);
-		ctrl.addNota(nota1);
-		
-	}
-	
-	@Test
-	public void test6() throws ClasaException {
-		//P->B->A A-valid B-invalid
-		expectedEx.expect(ClasaException.class);
-		expectedEx.expectMessage(Constants.emptyRepository);
-		ctrl.calculeazaMedii();
-		Nota nota = new Nota(1000, "Desena", 10);
-		ctrl.addNota(nota);
-		assertEquals(1, ctrl.getNote().size());
-	}
-	
-	@Test
-	public void test7() throws ClasaException {
-		//P->B->A->C B-valid A-valid C-valid
-		Elev e1 = new Elev(1, "Elev1");
-		ctrl.addElev(e1);
-		Nota nota = new Nota(1, "Desena", 10);
-		ctrl.addNota(nota);
-		assertEquals(1, ctrl.getNote().size());
-		ctrl.creeazaClasa(ctrl.getElevi(), ctrl.getNote());
-		List<Medie> rezultate = ctrl.calculeazaMedii();
-		assertEquals(1, rezultate.size());
-		List<Corigent> corigenti = ctrl.getCorigenti();
-		assertEquals(corigenti.size(),0);
-		
-	}
-	
-	@Test
-	public void test8() throws ClasaException {
-		//P->B->A->C B-invalid A-valid C-valid
-		expectedEx.expect(ClasaException.class);
-		expectedEx.expectMessage(Constants.emptyRepository);
-		//List<Medie> rezultate = ctrl.calculeazaMedii();
-		Elev e1 = new Elev(1, "Elev1");
-		ctrl.addElev(e1);
-		Nota nota = new Nota(1, "Desena", 10);
-		ctrl.addNota(nota);
-		assertEquals(1, ctrl.getNote().size());
-		ctrl.creeazaClasa(ctrl.getElevi(), ctrl.getNote());
-		List<Corigent> corigenti = ctrl.getCorigenti();
-		assertEquals(corigenti.size(),0);
-	}
-	
-	@Test
-	public void test9() throws ClasaException {
-		//P->B->A->C B-valid A-invalid C-valid
-		Elev e1 = new Elev(1, "Elev1");
-		ctrl.addElev(e1);
-		Nota nota = new Nota(1, "Desena", 10);
-		ctrl.addNota(nota);
-		assertEquals(1, ctrl.getNote().size());
-		ctrl.creeazaClasa(ctrl.getElevi(), ctrl.getNote());
-		List<Medie> rezultate = ctrl.calculeazaMedii();
-		assertEquals(1, rezultate.size());
-		expectedEx.expect(ClasaException.class);
-		expectedEx.expectMessage(Constants.invalidMateria);
-		Nota nota1 = new Nota(1, "Isto", 5);
-		ctrl.addNota(nota1);
-		List<Corigent> corigenti = ctrl.getCorigenti();
-		assertEquals(corigenti.size(),0);
-	}
-	
-	/*@Test
-	public void test10() {
-		//P->B->A->C B-valid A-valid C-invalid
-	}
-*/
 }

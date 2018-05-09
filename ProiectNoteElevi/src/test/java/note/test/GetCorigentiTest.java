@@ -8,12 +8,15 @@ import note.model.Corigent;
 import note.model.Elev;
 import note.model.Nota;
 
+import note.utils.Constants;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 
 import note.utils.ClasaException;
 
 import note.controller.NoteController;
+import org.junit.rules.ExpectedException;
 
 
 public class GetCorigentiTest {
@@ -24,6 +27,9 @@ public class GetCorigentiTest {
 	public void setUp() throws Exception {
 		ctrl = new NoteController();
 	}
+
+    @Rule
+    public ExpectedException expectedEx = ExpectedException.none();
 
 	@Test
 	public void test1() throws ClasaException {
@@ -37,7 +43,7 @@ public class GetCorigentiTest {
 		Nota n4 = new Nota(1,"Materie2", 10);
 		Nota n5 = new Nota(2,"Materie2", 4);
 		Nota n6 = new Nota(2,"Materie2", 5);
-		Nota n7 = new Nota(2,"Materie2", 6);
+		Nota n7 = new Nota(2,"Materie1", 6);
 		Nota n8 = new Nota(2,"Materie1", 7);
 		ctrl.addNota(n1);
 		ctrl.addNota(n2);
@@ -78,6 +84,7 @@ public class GetCorigentiTest {
 		ctrl.creeazaClasa(ctrl.getElevi(), ctrl.getNote());
 		List<Corigent> corigenti = ctrl.getCorigenti();
 		assertEquals(corigenti.size(),1);
+		assertEquals(corigenti.get(0).getNrMaterii(), 1);
 	}
 	
 	@Test
@@ -104,6 +111,7 @@ public class GetCorigentiTest {
 		ctrl.addNota(n8);
 		ctrl.creeazaClasa(ctrl.getElevi(), ctrl.getNote());
 		List<Corigent> corigenti = ctrl.getCorigenti();
+		assertEquals(corigenti.get(0).getNrMaterii(), 1);
 		assertEquals(corigenti.get(1).getNrMaterii(), corigenti.get(0).getNrMaterii());
 	}
 	
@@ -131,21 +139,38 @@ public class GetCorigentiTest {
 		ctrl.addNota(n8);
 		ctrl.creeazaClasa(ctrl.getElevi(), ctrl.getNote());
 		List<Corigent> corigenti = ctrl.getCorigenti();
-		assertEquals(corigenti.get(1).getNrMaterii()+1, corigenti.get(0).getNrMaterii());
+		assertEquals(corigenti.get(1).getNrMaterii(), 2);
+		assertEquals(corigenti.get(1).getNrMaterii(), corigenti.get(0).getNrMaterii()+1);
 	}
 	
 	@Test
 	public void test5() throws ClasaException {
 		ctrl.creeazaClasa(ctrl.getElevi(), ctrl.getNote());
-		List<Corigent> corigenti = ctrl.getCorigenti();
-		assertEquals(corigenti.size(),0);
+        expectedEx.expect(ClasaException.class);
+        expectedEx.expectMessage(Constants.emptyRepository);
+		ctrl.getCorigenti();
 	}
 	
 	@Test
 	public void test6() throws ClasaException {
-		//Elev e1 = new Elev(1, "Elev1");
-		ctrl.creeazaClasa(ctrl.getElevi(), ctrl.getNote());
+		Elev e1 = new Elev(1, "Elev1");
+        Elev e2 = new Elev(1, "Elev2");
+        ctrl.addElev(e1);
+        ctrl.addElev(e2);
+        ctrl.creeazaClasa(ctrl.getElevi(), ctrl.getNote());
 		List<Corigent> corigenti = ctrl.getCorigenti();
 		assertEquals(corigenti.size(),0);
 	}
+
+    @Test
+    public void test7() throws ClasaException {
+        Nota n1 = new Nota(1,"Materie1", 1);
+        Nota n2 = new Nota(1,"Materie1", 7);
+        ctrl.addNota(n1);
+        ctrl.addNota(n2);
+        expectedEx.expect(ClasaException.class);
+        expectedEx.expectMessage(Constants.emptyRepository);
+        ctrl.creeazaClasa(ctrl.getElevi(), ctrl.getNote());
+        ctrl.getCorigenti();
+    }
 }

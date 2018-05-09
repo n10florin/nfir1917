@@ -16,5 +16,5 @@ public interface ClasaRepository {
 	HashMap<Elev, HashMap<String, List<Integer>>> getClasa();
 	List<Medie> calculeazaMedii() throws ClasaException;
 	void afiseazaClasa();
-	List<Corigent> getCorigenti();
+	List<Corigent> getCorigenti() throws ClasaException;
 }

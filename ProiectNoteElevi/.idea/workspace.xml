@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbb83643-0920-439e-9e92-af55445daaaf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/note/controller/NoteController.class" afterPath="$PROJECT_DIR$/target/classes/note/controller/NoteController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/note/main/StartApp.class" afterPath="$PROJECT_DIR$/target/classes/note/main/StartApp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/note/repository/ClasaRepositoryMock.class" afterPath="$PROJECT_DIR$/target/classes/note/repository/ClasaRepositoryMock.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/note/controller/NoteController.java" afterPath="$PROJECT_DIR$/src/main/java/note/controller/NoteController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/note/main/StartApp.java" afterPath="$PROJECT_DIR$/src/main/java/note/main/StartApp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/note/repository/ClasaRepository.java" afterPath="$PROJECT_DIR$/src/main/java/note/repository/ClasaRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/note/repository/ClasaRepositoryMock.java" afterPath="$PROJECT_DIR$/src/main/java/note/repository/ClasaRepositoryMock.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/note/test/AddNotaTest.java" afterPath="$PROJECT_DIR$/src/test/java/note/test/AddNotaTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/note/test/CalculeazaMediiTest.java" afterPath="$PROJECT_DIR$/src/test/java/note/test/CalculeazaMediiTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/note/test/GetCorigentiTest.java" afterPath="$PROJECT_DIR$/src/test/java/note/test/GetCorigentiTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/note/test/IntegrationTest.java" afterPath="$PROJECT_DIR$/src/test/java/note/test/IntegrationTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -43,7 +42,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="ExportToHTMLSettings">
     <option name="OPEN_IN_BROWSER" value="true" />
-    <option name="OUTPUT_DIRECTORY" value="C:\Users\Florin\Desktop" />
+    <option name="OUTPUT_DIRECTORY" value="D:\git\vvss\DocsNoteElevi\lab3\coverage" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="ProiectNoteElevi" />
@@ -54,19 +53,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/note/main/StartApp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="58" column="30" lean-forward="false" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddNotaTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/note/test/AddNotaTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3009">
-              <caret line="188" column="47" lean-forward="false" selection-start-line="188" selection-start-column="47" selection-end-line="188" selection-end-column="47" />
+              <caret line="61" column="49" lean-forward="true" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,8 +64,8 @@
       <file leaf-file-name="ClasaRepositoryMock.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/note/repository/ClasaRepositoryMock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="63" column="49" lean-forward="true" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
+            <state relative-caret-position="410">
+              <caret line="125" column="25" lean-forward="true" selection-start-line="98" selection-start-column="4" selection-end-line="125" selection-end-column="25" />
               <folding>
                 <element signature="e#1484#1491#0" expanded="true" />
               </folding>
@@ -86,11 +73,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CalculeazaMediiTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CalculeazaMediiTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/note/test/CalculeazaMediiTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="69" column="37" lean-forward="false" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
+            <state relative-caret-position="378">
+              <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IntegrationTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/note/test/IntegrationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="107" column="1" lean-forward="true" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetCorigentiTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/note/test/GetCorigentiTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="36" column="39" lean-forward="true" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -104,6 +111,14 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Desena</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Desen</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -122,22 +137,22 @@
         <option value="$PROJECT_DIR$/src/main/java/note/model/Medie.java" />
         <option value="$PROJECT_DIR$/src/main/java/note/repository/EleviRepositoryMock.java" />
         <option value="$PROJECT_DIR$/src/main/java/note/utils/Constants.java" />
-        <option value="$PROJECT_DIR$/src/test/java/note/test/GetCorigentiTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/note/test/IntegrationTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/note/utils/ClasaException.java" />
         <option value="$PROJECT_DIR$/src/main/java/note/repository/NoteRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/note/repository/EleviRepository.java" />
         <option value="$PROJECT_DIR$/src/elevi" />
         <option value="$PROJECT_DIR$/src/note" />
         <option value="$PROJECT_DIR$/src/main/java/note/model/Nota.java" />
-        <option value="$PROJECT_DIR$/src/main/java/note/repository/ClasaRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/note/repository/NoteRepositoryMock.java" />
         <option value="$PROJECT_DIR$/src/main/java/note/test/java/note/test/IntegrationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/note/test/AddNotaTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/note/main/StartApp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/note/controller/NoteController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/note/test/AddNotaTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/note/repository/ClasaRepositoryMock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/note/repository/ClasaRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/note/controller/NoteController.java" />
         <option value="$PROJECT_DIR$/src/test/java/note/test/CalculeazaMediiTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/note/test/GetCorigentiTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/note/test/IntegrationTest.java" />
       </list>
     </option>
   </component>
@@ -389,7 +404,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DocsNoteElevi/lab3/coverage" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
@@ -410,7 +425,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CalculeazaMediiTest">
+  <component name="RunManager" selected="JUnit.IntegrationTest">
     <configuration default="false" name="StartApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -991,44 +1006,44 @@
       <workItem from="1522747909034" duration="6303000" />
       <workItem from="1522832982049" duration="866000" />
       <workItem from="1524645788316" duration="2447000" />
-      <workItem from="1525084248406" duration="9559000" />
+      <workItem from="1525084248406" duration="19565000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AllTest - 2018.05.08 at 13h 49m 30s.xml">
-      <configuration name="AllTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CalculeazaMediiTest - 2018.05.08 at 13h 51m 08s.xml">
+    <history-entry file="CalculeazaMediiTest - 2018.05.09 at 11h 57m 21s.xml">
       <configuration name="CalculeazaMediiTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculeazaMediiTest - 2018.05.08 at 13h 51m 49s.xml">
-      <configuration name="CalculeazaMediiTest" configurationId="JUnit" />
+    <history-entry file="IntegrationTest - 2018.05.08 at 16h 17m 48s.xml">
+      <configuration name="IntegrationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculeazaMediiTest - 2018.05.08 at 13h 54m 59s.xml">
-      <configuration name="CalculeazaMediiTest" configurationId="JUnit" />
+    <history-entry file="IntegrationTest - 2018.05.08 at 16h 18m 00s.xml">
+      <configuration name="IntegrationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculeazaMediiTest - 2018.05.08 at 13h 55m 28s.xml">
-      <configuration name="CalculeazaMediiTest" configurationId="JUnit" />
+    <history-entry file="IntegrationTest - 2018.05.08 at 16h 20m 59s.xml">
+      <configuration name="IntegrationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculeazaMediiTest - 2018.05.08 at 13h 55m 58s.xml">
-      <configuration name="CalculeazaMediiTest" configurationId="JUnit" />
+    <history-entry file="IntegrationTest - 2018.05.08 at 16h 23m 09s.xml">
+      <configuration name="IntegrationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculeazaMediiTest - 2018.05.08 at 13h 57m 06s.xml">
-      <configuration name="CalculeazaMediiTest" configurationId="JUnit" />
+    <history-entry file="IntegrationTest - 2018.05.08 at 16h 24m 12s.xml">
+      <configuration name="IntegrationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculeazaMediiTest - 2018.05.08 at 14h 02m 08s.xml">
-      <configuration name="CalculeazaMediiTest" configurationId="JUnit" />
+    <history-entry file="IntegrationTest - 2018.05.08 at 16h 24m 55s.xml">
+      <configuration name="IntegrationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculeazaMediiTest - 2018.05.08 at 14h 02m 12s.xml">
-      <configuration name="CalculeazaMediiTest" configurationId="JUnit" />
+    <history-entry file="IntegrationTest - 2018.05.08 at 16h 32m 28s.xml">
+      <configuration name="IntegrationTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CalculeazaMediiTest - 2018.05.08 at 14h 11m 43s.xml">
-      <configuration name="CalculeazaMediiTest" configurationId="JUnit" />
+    <history-entry file="IntegrationTest - 2018.05.08 at 16h 32m 58s.xml">
+      <configuration name="IntegrationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IntegrationTest - 2018.05.09 at 12h 38m 31s.xml">
+      <configuration name="IntegrationTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31986000" />
+    <option name="totallyTimeSpent" value="41992000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1056,12 +1071,12 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39914772" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21732284" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21732026" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30555555" sideWeight="0.49468085" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3251634" sideWeight="0.49468085" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21428572" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1320,20 +1335,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/note/test/GetCorigentiTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/note/test/IntegrationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="43" column="10" lean-forward="false" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/note/model/Corigent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1404,13 +1405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/note/repository/ClasaRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="55" lean-forward="false" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/note/test/java/note/test/CalculeazaMediiTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/note/test/java/note/test/GetCorigentiTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/note/test/java/note/test/IntegrationTest.java" />
@@ -1447,14 +1441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/note/controller/NoteController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/elevi">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1471,48 +1457,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/note/main/StartApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="58" column="30" lean-forward="false" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/note/test/AddNotaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3009">
-          <caret line="188" column="47" lean-forward="false" selection-start-line="188" selection-start-column="47" selection-end-line="188" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/note/model/Medie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-17">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/note/repository/ClasaRepositoryMock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="63" column="49" lean-forward="true" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
-          <folding>
-            <element signature="e#1484#1491#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/note/repository/NoteRepositoryMock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -1525,10 +1473,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/note/repository/NoteRepositoryMock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/note/test/AddNotaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="106" column="42" lean-forward="false" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/note/repository/ClasaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/note/controller/NoteController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="70" column="62" lean-forward="false" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/note/test/GetCorigentiTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="36" column="39" lean-forward="true" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/note/test/CalculeazaMediiTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="69" column="37" lean-forward="false" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
+        <state relative-caret-position="378">
+          <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/note/main/StartApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="61" column="49" lean-forward="true" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/note/repository/ClasaRepositoryMock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="125" column="25" lean-forward="true" selection-start-line="98" selection-start-column="4" selection-end-line="125" selection-end-column="25" />
+          <folding>
+            <element signature="e#1484#1491#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/note/test/IntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="107" column="1" lean-forward="true" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
           <folding />
         </state>
       </provider>

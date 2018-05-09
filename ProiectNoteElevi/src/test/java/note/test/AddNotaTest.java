@@ -104,7 +104,7 @@ public class AddNotaTest {
 	
 	@Test
 	public void test11() throws ClasaException {
-		Nota nota = new Nota(1000, "Desena", 10);
+		Nota nota = new Nota(1000, "Desen", 10);
 		ctrl.addNota(nota);
 		assertEquals(1, ctrl.getNote().size());
 	}
