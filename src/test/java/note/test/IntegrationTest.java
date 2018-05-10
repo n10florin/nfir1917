@@ -77,7 +77,7 @@ public class IntegrationTest {
 		ctrl.addNota(n8);
 		ctrl.creeazaClasa(ctrl.getElevi(), ctrl.getNote());
 		List<Corigent> corigenti = ctrl.getCorigenti();
-		assertEquals(corigenti.get(1).getNrMaterii(), corigenti.get(0).getNrMaterii()+1);
+		assertEquals(corigenti.get(1).getNrMaterii()+1, corigenti.get(0).getNrMaterii());
 	}
 
     @Test

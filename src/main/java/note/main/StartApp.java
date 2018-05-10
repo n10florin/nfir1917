@@ -1,6 +1,7 @@
 package note.main;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -32,8 +33,8 @@ public class StartApp {
         NoteController ctrl = new NoteController();
         List<Medie> medii;
         List<Corigent> corigenti;
-        ctrl.readElevi("D:\\git\\vvss\\ProiectNoteElevi\\src\\elevi");
-        ctrl.readNote("D:\\git\\vvss\\ProiectNoteElevi\\src\\note");
+        ctrl.readElevi("src" + File.separator + "elevi");
+        ctrl.readNote("src" + File.separator + "note");
         ctrl.creeazaClasa(ctrl.getElevi(), ctrl.getNote());
         boolean gasit = false;
         while (!gasit) {
