@@ -1,5 +1,6 @@
 package note.repository;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -57,23 +58,20 @@ public class ClasaRepositoryMock implements ClasaRepository{
 				medie.setElev(elev);
 				int nrMaterii = 0;
 				double sumaMedii = 0;
-				double medieElev;
 				for(String materie : clasa.get(elev).keySet()) {
 					nrMaterii++;
 					List<Integer> noteElev = clasa.get(elev).get(materie);
 					int nrNote = noteElev.size();
 					int i = 0;
 					double suma = 0;
-					if(nrNote >= 0) {
-						while(i < nrNote) {
-							double nota = noteElev.get(i);
-							suma += nota;
-							i++;
-						}
-						sumaMedii = sumaMedii + suma/i;
+					while(i < nrNote) {
+						double nota = noteElev.get(i);
+						suma += nota;
+						i++;
 					}
+					sumaMedii = sumaMedii + suma/i;
 				}
-				medieElev = sumaMedii / nrMaterii;
+				double medieElev = sumaMedii / nrMaterii;
 				medie.setMedie(medieElev);
 				medii.add(medie);
 			}
@@ -87,9 +85,10 @@ public class ClasaRepositoryMock implements ClasaRepository{
 		for(Elev elev : clasa.keySet()) {
 			System.out.println(elev);
 			for(String materie : clasa.get(elev).keySet()) {
-				System.out.println(materie);
+				System.out.print(materie + ": ");
 				for(double nota : clasa.get(elev).get(materie))
 					System.out.print(nota + " ");
+				System.out.println();
 			}
 		}
 	}

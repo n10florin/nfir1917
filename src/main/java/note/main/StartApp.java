@@ -41,7 +41,8 @@ public class StartApp {
             System.out.println("1. Adaugare Nota");
             System.out.println("2. Calculeaza medii");
             System.out.println("3. Elevi corigenti");
-            System.out.println("4. Iesire");
+            System.out.println("4. Afisare clasa");
+            System.out.println("5. Iesire");
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             try {
                 int option = Integer.parseInt(br.readLine());
@@ -69,6 +70,9 @@ public class StartApp {
                             System.out.println(corigent);
                         break;
                     case 4:
+                        ctrl.afiseazaClasa();
+                        break;
+                    case 5:
                         gasit = true;
                         break;
                     default:

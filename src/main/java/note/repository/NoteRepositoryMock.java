@@ -38,8 +38,6 @@ public class NoteRepositoryMock implements NoteRepository{
 			throw new ClasaException(Constants.invalidNrmatricol);
 		if(nota.getNota() < Constants.minNota || nota.getNota() > Constants.maxNota)
 			throw new ClasaException(Constants.invalidNota);
-		if(nota.getNrmatricol() != nota.getNrmatricol())
-			throw new ClasaException(Constants.invalidNrmatricol);
 		return true;
 	}
 
