@@ -28,7 +28,9 @@ public class NoteController {
 	
 	public void addNota(Nota nota) throws ClasaException {
 		note.addNota(nota);
-		clasa.creazaClasa(elevi.getElevi(), note.getNote());
+		Elev elev = elevi.getElev(nota.getNrmatricol());
+        HashMap<Elev, HashMap<String, List<Integer>>> clasaMap = clasa.getClasa();
+		clasaMap.get(elev).get(nota.getMaterie()).add(nota.getNota());
 	}
 	
 	public void addElev(Elev elev) {

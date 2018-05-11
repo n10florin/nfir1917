@@ -88,9 +88,11 @@ public class ClasaRepositoryMock implements ClasaRepository{
 				System.out.print(materie + ": ");
 				for(double nota : clasa.get(elev).get(materie))
 					System.out.print(nota + " ");
-				System.out.println();
+				System.out.print("; ");
 			}
+            System.out.println();
 		}
+        System.out.println();
 	}
 
 	@Override

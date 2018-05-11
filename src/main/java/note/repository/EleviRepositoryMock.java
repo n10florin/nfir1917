@@ -30,6 +30,15 @@ public class EleviRepositoryMock implements EleviRepository{
 		// TODO Auto-generated method stub
 		return elevi;
 	}
+
+    @Override
+	public Elev getElev(int nrMatricol){
+		for (Elev elev: elevi) {
+			if (elev.getNrmatricol() == nrMatricol)
+				return elev;
+		}
+		return null;
+	}
 	
 	@Override
 	public void readElevi(String fisier) {

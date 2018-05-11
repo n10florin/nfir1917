@@ -55,9 +55,6 @@ public class StartApp {
                         System.out.print("Dati nota:");
                         Integer n = Integer.parseInt(br.readLine());
                         ctrl.addNota(new Nota(nrMatricol, materie, n));
-                        for (Nota nota : ctrl.getNote()) {
-                            System.out.println(nota);
-                        }
                         break;
                     case 2:
                         medii = ctrl.calculeazaMedii();
