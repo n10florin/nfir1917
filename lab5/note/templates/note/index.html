@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Note</title>
+</head>
+<body>
+    {% if object_list %}
+        <ul type="none">
+        {% for nota in object_list %}
+            <li>{{ nota }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nu exista note.</p>
+    {% endif %}
+    <a href="{% url 'note:add' %}">Adauga nota</a>
+</body>
+</html>
